@@ -11,6 +11,10 @@ import java.util.Collections;
 
     - with ok param, works as expected due to synchronizedList.
     - without params, threads overlap values.
+
+ Not efficient due to the use of "intrinsic lock". Even though when both threads
+ execute independent methods have to wait each other due to the lock. If we want
+ a more efficient approach, let's use CONCURRENT COLLECTIONS!!!
  */
 public class App {
     public static void main(String[] args) {
