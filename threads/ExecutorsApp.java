@@ -14,7 +14,8 @@ class Task implements Runnable {
     @Override
     public void run() {
 	System.out.println(String.format("Task with id %s is working in thread %s", id, Thread.currentThread().getName()));
-	long duration = (long)Math.random()*50;
+        // Random between 2 and 5
+	int duration = (int)(Math.random() * ((5 - 2) + 1)) + 2;
 	try {
 	    TimeUnit.SECONDS.sleep(duration);
 	} catch (InterruptedException e) {
