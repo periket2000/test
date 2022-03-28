@@ -43,6 +43,7 @@ class Worker2 implements Runnable {
 	    try {
 		int counter = queue.take();
 		System.out.println("Taking item from queue ... " + counter);
+		System.out.println("Queue: " + queue);
 		Thread.sleep(300);
 	    } catch (InterruptedException e) {
 		e.printStackTrace();
