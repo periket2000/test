@@ -2,3 +2,5 @@
 *.class
 **/es/*
 *#*
+*.iml
+.idea*

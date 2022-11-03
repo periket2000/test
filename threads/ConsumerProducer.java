@@ -8,7 +8,7 @@ class Worker1 implements Runnable {
     private BlockingQueue<Integer> queue;
 
     public Worker1(BlockingQueue<Integer> queue) {
-	this.queue = queue;
+		this.queue = queue;
     }
     
     @Override
@@ -44,7 +44,7 @@ class Worker2 implements Runnable {
 		int counter = queue.take();
 		System.out.println("Taking item from queue ... " + counter);
 		System.out.println("Queue: " + queue);
-		Thread.sleep(300);
+		Thread.sleep(130);
 	    } catch (InterruptedException e) {
 		e.printStackTrace();
 	    }
@@ -60,7 +60,7 @@ class Worker2 implements Runnable {
 public class ConsumerProducer {
     public static void main(String[] args) {
 	System.out.println("Start");
-	BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(10);
+	BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(20);
 	Worker1 w1 = new Worker1(queue);
 	Worker2 w2 = new Worker2(queue);
 	new Thread(w1).start();
