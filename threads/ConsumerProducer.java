@@ -17,7 +17,7 @@ class Worker1 implements Runnable {
 	System.out.println("Worker1 started");	
 	while(true) {
 	    try {
-		System.out.println("Putting in the queue ... " + counter);
+		System.out.println("Putting in the queue ... " + counter + " queue size: " + queue.size());
 		queue.put(counter);
 		counter++;
 		Thread.sleep(100);
